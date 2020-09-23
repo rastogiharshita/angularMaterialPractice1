@@ -19,8 +19,10 @@
         <mat-expansion-panel-header >
           <span>Operations & Support</span>
         </mat-expansion-panel-header>
-        <button mat-button class="sidenav-button">OBS</button>
-        <button mat-button class="sidenav-button">IAA</button>
+        <button mat-button class="sidenav-button"
+         routerLink="/obs" routerLinkActive #rLAobs="routerLinkActive"
+         [color]="rLAobs.isActive? 'primary':'accent'">OBS</button>
+        <button mat-button class="sidenav-button" routerLink="/iaa">IAA</button>
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header >
@@ -35,11 +37,14 @@
         </mat-expansion-panel-header>
         <button mat-button class="sidenav-button">Retired Systems</button>
       </mat-expansion-panel>
+      <button mat-button class="sidenav-button"
+      routerLink="/forms" routerLinkActive #rLAforms="routerLinkActive"
+      [color]="rLAforms.isActive ? 'primary':'accent'">Forms</button>
     
     </mat-sidenav>
     <mat-sidenav-content >
       <div class="sidenav-maincontent">
-        <button (click)="sideNav.toggle()">Open/Close</button>
+        <router-outlet></router-outlet>
       </div>
       
     </mat-sidenav-content>

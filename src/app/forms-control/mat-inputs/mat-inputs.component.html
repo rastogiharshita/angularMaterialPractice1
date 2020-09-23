@@ -1,0 +1,22 @@
+<div>
+    <mat-card>
+        <mat-card-title>Displaying Material Inputs</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="sampleForm">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="sampleEmail">
+                    <mat-hint align="end">Hint: example@email.com </mat-hint>
+                    <mat-error align="end">Please enter a valid email address</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Phone Number</mat-label>
+                    <span matPrefix>(+91)&nbsp;</span>
+                    <input matInput type="text">
+                    <mat-icon matSuffix>phone</mat-icon>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+    </mat-card>
+</div>

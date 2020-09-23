@@ -1,0 +1,17 @@
+<div>
+    <mat-card>
+        <mat-card-title>Date Picker</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="sampleForm">
+                <mat-form-field>
+                    <mat-label>Sample Date</mat-label>
+                    <input matInput type="text" [matDatepicker]="sampleDate" [max]="minDate" 
+                    formControlName="sampleDate">
+                    <mat-datepicker-toggle matSuffix [for]="sampleDate"></mat-datepicker-toggle>
+                    <mat-datepicker #sampleDate></mat-datepicker>
+                    <mat-error>Please enter valid date!</mat-error>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
