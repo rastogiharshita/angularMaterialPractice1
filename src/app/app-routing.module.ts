@@ -17,6 +17,11 @@ const routes: Routes = [
     path: 'forms',
     loadChildren: () => import('./forms-control/forms-control.module')
                         .then(m => m.FormsControlModule)
+  },
+  {
+    path: 'modals',
+    loadChildren: () => import('./popups-modals/popups-modals.module')
+                        .then(m => m.PopupsModalsModule)
   }
 ];
 

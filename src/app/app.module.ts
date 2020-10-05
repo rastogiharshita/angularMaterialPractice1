@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material components
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatListModule} from '@angular/material/list';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+// import { MatSortModule } from '@angular/material/sort';
+// import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -25,13 +27,15 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserAnimationsModule,
 
     //Material components
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
     MatButtonModule,
     MatExpansionModule,
+    MatIconModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule,
+    // MatSortModule,
+    // MatTableModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -37,10 +37,15 @@
         </mat-expansion-panel-header>
         <button mat-button class="sidenav-button">Retired Systems</button>
       </mat-expansion-panel>
+
       <button mat-button class="sidenav-button"
       routerLink="/forms" routerLinkActive #rLAforms="routerLinkActive"
       [color]="rLAforms.isActive ? 'primary':'accent'">Forms</button>
-    
+
+      <button mat-button class="sidenav-button"
+      routerLink="/modals" routerLinkActive #rLAmodals="routerLinkActive"
+      [color]="rLAmodals.isActive ? 'primary':'accent'">Popups and Modals</button>
+
     </mat-sidenav>
     <mat-sidenav-content >
       <div class="sidenav-maincontent">

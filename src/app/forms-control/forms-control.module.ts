@@ -1,3 +1,4 @@
+import { DialogsComponent } from './../popups-modals/dialogs/dialogs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,33 +8,48 @@ import { FormsControlRoutingModule } from './forms-control-routing.module';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { MatInputsComponent } from './mat-inputs/mat-inputs.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
+import { SampleMatTablesComponent } from './sample-mat-tables/sample-mat-tables.component';
 
 // Material Components
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
-  declarations: [AutocompleteComponent, MatInputsComponent, DatePickerComponent],
+  declarations: [
+    AutocompleteComponent,
+    MatInputsComponent,
+    DatePickerComponent,
+    SampleMatTablesComponent
+  ],
+  entryComponents: [
+    DialogsComponent
+  ],
   imports: [
     CommonModule,
     FormsControlRoutingModule,
     SharedModule,
 
     // Material Components
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
     MatAutocompleteModule,
-    MatInputModule,
     MatCardModule,
+    MatCheckboxModule,
     MatDatepickerModule,
-    MatMomentDateModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatMomentDateModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
   ]
 })
 export class FormsControlModule { }
